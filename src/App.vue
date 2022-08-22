@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <TheHeader />
-    <TheMain />
     <main id="main">
       <router-view></router-view>
     </main>
@@ -88,5 +87,22 @@ img {
     background: #65d;
     transform: scale(1.1);
   }
+}
+
+input, textarea {
+	border-radius: 4px;
+	border: 1px solid white;
+	padding: 15px;
+	box-shadow: 0 4px 8px rgba(30, 60, 90, 0.1);
+	transition: all .3s;
+	font-size: 1rem;
+	font-family: "Avenir", Arial, Helvetica, sans-serif;
+	margin-bottom: 15px;
+
+	&:hover, &:focus {
+		outline: none;
+		box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
+		border-color: #87f;
+	}
 }
 </style>

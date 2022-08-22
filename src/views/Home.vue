@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Compre ou Venda</h1>
+    <h1>&#129304;Compre ou Venda &#129304;</h1>
 		<SearchProduct/>
 		<ProductList/>
   </section>
