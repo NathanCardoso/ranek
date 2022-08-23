@@ -13,18 +13,18 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .loading {
   text-align: center;
-  margin-top: 80px;
+  margin-top: rem(80);
 }
 .loading span {
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  background: #87f;
-  margin: 4px;
+  width: rem(10);
+  height: rem(10);
+  border-radius: rem(10);
+  background: $purple;
+  margin: rem(4);
   animation: dots 0.6s cubic-bezier(0.6, 0.1, 1, 0.4) infinite alternate;
 }
 
@@ -46,7 +46,7 @@ export default {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(0, 30px, 0);
+    transform: translate3d(0, rem(30), 0);
   }
 }
 </style>

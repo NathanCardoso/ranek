@@ -1,0 +1,13 @@
+/*Function from converter pixel in rem*/
+@function rem($pixelFont, $contextFont: 16){
+	@return ($pixelFont / $contextFont) + rem
+};
+
+/*Color variables*/
+$gray: #345;
+$shadow: 0 rem(4) rem(8) rgba(30, 60, 90, 0.1);
+$shadow_alt: 0 rem(6) rem(12) rgba(30, 60, 90, 0.2);
+$purple: #87f;
+$purple_alt: #65d;
+$orange: #e80;
+$white: #fff;

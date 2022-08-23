@@ -22,9 +22,9 @@ export default {
 
 <style lang="scss" scoped>
 	h1 {
-		color: #87f;
-		font-size: 2rem;
+		color: $purple;
+		font-size: rem(32);
 		text-align: center;
-		margin-top: 40px;
+		margin-top: rem(40);
 	}
 </style>

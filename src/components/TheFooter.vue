@@ -12,14 +12,14 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 	footer {
-		background: #87f;
-		padding: 25px 0;
+		background: $purple;
+		padding: rem(25) 0;
 		text-align: center;
-		font-size: 1.2rem;
-		color: #fff;
+		font-size: rem(20);
+		color: $white;
 		position: relative;
-		top: 75px;
+		top: rem(75);
 	}
 </style>

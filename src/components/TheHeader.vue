@@ -17,20 +17,23 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+header {
+	box-shadow: $shadow;
+}
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-	padding: 15px 0;
-	box-shadow: 0 2px 4px rgab(30, 60, 90, .1);
+	padding: rem(15) 0;
 }
 
 .logo {
-	padding: 10px 0;
+	padding: rem(10) 0;
 }
 
 .logo img {
-	width: 90px;
+	width: rem(90);
 }
 </style>

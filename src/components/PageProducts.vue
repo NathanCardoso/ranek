@@ -60,14 +60,14 @@ ul {
     display: inline-block;
 
     a {
-      padding: 2px 8px;
-      border-radius: 2px;
-      margin: 4px;
+      padding: rem(2) rem(8);
+      border-radius: rem(2);
+      margin: rem(4);
 
       &.router-link-exact-active,
       &:hover {
-        background: #87f;
-        color: #fff;
+        background: $purple;
+        color: $white;
       }
     }
   }
