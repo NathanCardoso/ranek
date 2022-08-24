@@ -2,7 +2,9 @@
   <div id="app">
     <TheHeader />
     <main id="main">
-      <router-view></router-view>
+      <transition mode="out-in">
+        <router-view></router-view>
+      </transition>
     </main>
     <TheFooter />
   </div>
@@ -72,10 +74,10 @@ img {
   max-width: 100%;
   padding: 0 rem(20);
 
-	&.container-default {
-		max-width: rem(1200);
-		margin: 0 auto;
-	}
+  &.container-default {
+    max-width: rem(1200);
+    margin: 0 auto;
+  }
 }
 
 /*Button*/
@@ -86,50 +88,58 @@ img {
   color: $white;
   text-align: center;
   font-size: rem(16);
-  box-shadow: 0 rem(4) rem(8) $shadow;
+  box-shadow: $shadow_alt;
   transition: all 0.3s;
   border: none;
   font-family: "Avenir", Arial, Helvetica, sans-serif;
   cursor: pointer;
-  
-	&:hover {
+
+  &:hover {
     background: $purple_alt;
     transform: scale(1.1);
   }
 }
 
 /*Style of the input and textarea*/
-input, textarea {
-	border-radius: rem(4);
-	border: rem(1) solid white;
-	padding: rem(15);
-	box-shadow: rem(0) rem(4) rem(8) $shadow;
-	transition: all .3s;
-	font-size: rem(16);
-	font-family: "Avenir", Arial, Helvetica, sans-serif;
-	margin-bottom: rem(15);
+label {
+	margin-bottom: rem(5);
+}
 
-	&:hover, &:focus {
-		outline: none;
-		box-shadow: rem(0) rem(6) rem(12) $shadow_alt;
-		border-color: $purple;
-	}
+input,
+textarea {
+  border-radius: rem(4);
+  border: rem(1) solid white;
+  padding: rem(15);
+  box-shadow: $shadow;
+  transition: all 0.3s;
+  font-size: rem(16);
+  font-family: "Avenir", Arial, Helvetica, sans-serif;
+  margin-bottom: rem(15);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: rem(0) rem(6) rem(12) $shadow_alt;
+    border-color: $purple;
+  }
 }
 
 /*Animate*/
-.v-enter, .v-leave-to {
-	opacity: 0;
+.v-enter,
+.v-leave-to {
+  opacity: 0;
 }
 
 .v-enter {
-	transform: translate3d(0, rem(-20), 0);
+  transform: translate3d(0, rem(-20), 0);
 }
 
 .v-leave-to {
-	transform: translate3d(0, rem(20), 0);
+  transform: translate3d(0, rem(20), 0);
 }
 
-.v-enter-active, .v-leave-active {
-	transition: all .3s;
+.v-enter-active,
+.v-leave-active {
+  transition: all 0.3s;
 }
 </style>
