@@ -7,7 +7,7 @@
     <label for="password">Senha</label>
     <input type="password" id="password" name="password" v-model="password" />
     <label for="zip-code">Cep</label>
-    <input type="text" id="zip-code" name="zip-code" v-model="zipCode" />
+    <input type="text" id="zip-code" name="zip-code" v-model="zipCode" @keyup="fillCep"/>
     <label for="road">Rua</label>
     <input type="text" id="road" name="road" v-model="road" />
     <label for="number">Numero</label>
@@ -26,6 +26,7 @@
 
 <script>
 import { mapFields } from "@/helpers.js";
+import {getCep} from "@/services.js"
 
 export default {
   name: "UserForm",
@@ -46,6 +47,20 @@ export default {
       mutation: "UPDATE_USER",
     }),
   },
+	methods: {
+		fillCep() {
+			const cep = this.zipCode.replace(/\D/g, "")
+			if(cep.length === 8) {
+				getCep(cep)
+				.then(response => {
+					this.road = response.data.logradouro
+					this.district = response.data.bairro
+					this.city = response.data.localidade
+					this.state = response.data.uf
+				})
+			}
+		}
+	},
 };
 </script>
 

@@ -4,7 +4,7 @@
     <transition mode="out-in">
       <button v-if="!create" class="btn" @click="create = true">Criar Conta</button>
       <UserForm v-else>
-				<button class="btn btn-form">Criar Usuário</button>
+				<button class="btn btn-form" @click.prevent="userCreate">Criar Usuário</button>
 			</UserForm>
     </transition>
   </section>
@@ -23,6 +23,11 @@ export default {
   components: {
     UserForm,
   },
+	methods: {
+		userCreate() {
+			this.$store.dispatch("userCreate", this.$store.state.user)
+		}
+	}
 };
 </script>
 
