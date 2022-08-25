@@ -1,16 +1,16 @@
 <template>
   <section>
     <div v-if="product" class="product">
-      <ul class="photos" v-if="product.foto">
-        <li v-for="(foto, index) in product.fotos" :key="index">
-          <img :src="foto.src" :alt="foto.titulo" />
+      <ul class="photos" v-if="product.photo">
+        <li v-for="(foto, index) in product.photo" :key="index">
+          <img :src="foto.src" :alt="foto.title" />
         </li>
       </ul>
       <div class="info">
-        <h1>{{ product.nome }}</h1>
-        <p class="preco">{{ product.preco | priceNumber }}</p>
-        <p class="descricao">{{ product.descricao }}</p>
-        <button class="btn" v-if="product.vendido === 'false'">Comprar</button>
+        <h1>{{ product.name }}</h1>
+        <p class="price">{{ product.price | priceNumber }}</p>
+        <p class="description">{{ product.description }}</p>
+        <button class="btn" v-if="product.sold === 'false'">Comprar</button>
         <button class="btn" v-else disabled>Produto Vendido</button>
       </div>
     </div>
@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     getProduct() {
-      api.get(`/produto/${this.id}`).then((response) => {
+      api.get(`/product/${this.id}`).then((response) => {
         this.product = response.data;
       });
     },
@@ -54,13 +54,13 @@ export default {
   margin: 0 auto;
 
   .info {
-    .preco {
+    .price {
       color: $orange;
       font-weight: bold;
       font-size: rem(24);
       margin-bottom: rem(40);
     }
-    .descricao {
+    .description {
       font-size: rem(20);
     }
     .btn {

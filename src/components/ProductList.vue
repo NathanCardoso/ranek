@@ -5,13 +5,13 @@
         <div v-for="(product, index) in products" :key="index" class="product">
           <router-link :to="{name: 'product', params: {id: product.id}}">
             <img
-              v-if="product.foto"
-              :src="product.foto[0].src"
-              :alt="product.foto[0].titulo"
+              v-if="product.photo"
+              :src="product.photo[0].src"
+              :alt="product.photo[0].title"
             />
-            <p class="price">{{ product.preco | priceNumber}}</p>
-            <h2 class="title">{{ product.nome }}</h2>
-            <p>{{ product.descricao }}</p>
+            <p class="price">{{ product.price | priceNumber}}</p>
+            <h2 class="title">{{ product.name}}</h2>
+            <p>{{ product.description}}</p>
           </router-link>
         </div>
         <PageProducts :totalProducts="totalProducts" :pageProducts="pageProducts" />
@@ -46,7 +46,7 @@ export default {
   computed: {
     url() {
       const query = serialize(this.$route.query);
-      return `/produto?_limit=${this.pageProducts}${query}`;
+      return `/product?_limit=${this.pageProducts}${query}`;
     },
   },
   watch: {
