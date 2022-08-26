@@ -1,11 +1,86 @@
 <template>
-	<p>SalesUser</p>
+  <section>
+    <div v-if="sales">
+      <h2>Vendas</h2>
+      <div class="product-wrapper" v-for="(sale, index) in sales" :key="index">
+        <ProductItem v-if="sale.product" :product="sale.product">
+          <p class="seller"><span>Comprador: </span>{{ sale.saller_id }}</p>
+        </ProductItem>
+				<div class="delivery">
+					<h3>Entrega: </h3>
+					<ul v-if="sales.address">
+						<li :v-for="(value, key) in sales.address" :key="key">
+							{{key}}: {{value}}
+						</li>
+					</ul>
+				</div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import ProductItem from "@/components/ProductItem.vue";
+import { api } from "@/services";
+import { mapState } from "vuex";
+
 export default {
-	name: "SalesUser"
-}
+  name: "BuyUser",
+  data() {
+    return {
+      sales: null,
+    };
+  },
+  computed: {
+    ...mapState(["user", "login"]),
+  },
+  components: {
+    ProductItem,
+  },
+  methods: {
+    getSales() {
+      api.get(`/transaction?seller_id=${this.user.id}`).then((response) => {
+				console.log(response.data)
+        this.sales = response.data;
+      });
+    },
+  },
+  watch: {
+    login() {
+      this.getSales();
+    },
+  },
+  created() {
+    if (this.login) {
+      this.getSales();
+    }
+  },
+};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+h2 {
+  margin-bottom: rem(20);
+}
+.product-wrapper {
+  margin-bottom: rem(40);
+
+  .seller {
+    span {
+      color: $orange;
+    }
+  }
+
+	.delivery {
+		display: grid;
+		grid-template-columns: minmax(rem(1000), rem(200)) 1fr;
+		gap: rem(20);
+		margin-bottom: rem(60);
+
+		h3 {
+			justify-self: end;
+			margin: 0px;
+		}
+	}
+}
+</style>

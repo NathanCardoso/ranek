@@ -1,13 +1,15 @@
 <template>
   <form>
-    <label for="name">Nome</label>
-    <input type="text" id="name" name="name" v-model="name" />
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" v-model="email" />
-    <label for="password">Senha</label>
-    <input type="password" id="password" name="password" v-model="password" />
+    <div class="user" v-if="showLoginData">
+      <label for="name">Nome</label>
+      <input type="text" id="name" name="name" v-model="name" />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" v-model="email" />
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" v-model="password" />
+    </div>
     <label for="zip-code">Cep</label>
-    <input type="text" id="zip-code" name="zip-code" v-model="zipCode" @keyup="fillCep"/>
+    <input type="text" id="zip-code" name="zip-code" v-model="zipCode" @keyup="fillCep" />
     <label for="road">Rua</label>
     <input type="text" id="road" name="road" v-model="road" />
     <label for="number">Numero</label>
@@ -26,7 +28,7 @@
 
 <script>
 import { mapFields } from "@/helpers.js";
-import {getCep} from "@/services.js"
+import { getCep } from "@/services.js";
 
 export default {
   name: "UserForm",
@@ -46,29 +48,38 @@ export default {
       base: "user",
       mutation: "UPDATE_USER",
     }),
+    showLoginData() {
+      return !this.$store.state.login || this.$route.name === "edit-user";
+    },
   },
-	methods: {
-		fillCep() {
-			const cep = this.zipCode.replace(/\D/g, "")
-			if(cep.length === 8) {
-				getCep(cep)
-				.then(response => {
-					this.road = response.data.logradouro
-					this.district = response.data.bairro
-					this.city = response.data.localidade
-					this.state = response.data.uf
-				})
-			}
-		}
-	},
+  methods: {
+    fillCep() {
+      const cep = this.zipCode.replace(/\D/g, "");
+      if (cep.length === 8) {
+        getCep(cep).then((response) => {
+          this.road = response.data.logradouro;
+          this.district = response.data.bairro;
+          this.city = response.data.localidade;
+          this.state = response.data.uf;
+        });
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 form {
-  display: grid;
-  grid-template-columns: rem(80) 1fr;
-  align-items: center;
+	display: grid;
+	grid-template-columns: rem(80) 1fr;
+	align-items: center;
+	grid-column: 1 / 3;
+	.user {
+		display: grid;
+		grid-template-columns: rem(80) 1fr;
+		align-items: center;
+		grid-column: 1 / 3;
+	}
 
   .button {
     grid-column: 2;

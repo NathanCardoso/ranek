@@ -5,11 +5,12 @@
       "name": "André Rafael",
       "email": "andre@origamid.com",
       "password": "123",
-      "road": "Rua Ali Perto",
-      "zipCode": "12345678",
-      "number": "25",
+      "zipCode": "24715522",
+      "road": "Rua Caetés",
+      "district": "Jardim Catarina",
+      "city": "São Gonçalo",
       "state": "RJ",
-      "city": "Rio de Janeiro"
+      "number": "710"
     },
     {
       "id": "joao@origamid.com",
@@ -69,16 +70,161 @@
       "city": "Rio de Janeiro",
       "state": "RJ",
       "number": "260"
+    },
+    {
+      "id": "marcos@origamid.com",
+      "name": "marcos",
+      "email": "marcos@origamid.com",
+      "password": "codezone01",
+      "zipCode": "24230251",
+      "road": "Avenida Sete de Setembro",
+      "district": "Icaraí",
+      "city": "Niterói",
+      "state": "RJ",
+      "number": "317"
+    },
+    {
+      "id": "renata@codezone.com",
+      "name": "Renata",
+      "email": "renata@codezone.com",
+      "password": "codezone01",
+      "zipCode": "24230251",
+      "road": "Avenida Sete de Setembro",
+      "district": "Icaraí",
+      "city": "Niterói",
+      "state": "RJ",
+      "number": "317"
+    }
+  ],
+  "transaction": [
+    {
+      "buyer_id": "andre@origamid.com",
+      "seller_id": "andre@origamid.com",
+      "product": {
+        "name": "Iphone 13 Pro Max 1TB",
+        "price": "120000",
+        "description": "O melhor iphone da atualidade",
+        "photos": null,
+        "sold": "false",
+        "user_id": "andre@origamid.com",
+        "id": "PJu7gxW"
+      },
+      "address": {
+        "zipCode": "24715522",
+        "road": "Rua Caetés",
+        "number": "710",
+        "district": "Jardim Catarina",
+        "city": "São Gonçalo",
+        "state": "RJ"
+      },
+      "id": 1
+    },
+    {
+      "buyer_id": "marcos@origamid.com",
+      "seller_id": "gaby@origamid.com",
+      "product": {
+        "id": "smartphone",
+        "name": "Smartphone",
+        "user_id": "gaby@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Samrtphone",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "24230251",
+        "road": "Avenida Sete de Setembro",
+        "number": "317",
+        "district": "Icaraí",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 2
+    },
+    {
+      "buyer_id": "renata@codezone.com",
+      "seller_id": "filipi@origamid.com",
+      "product": {
+        "id": "tablet",
+        "name": "Tablet",
+        "user_id": "filipi@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Tablet",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "24230251",
+        "road": "Avenida Sete de Setembro",
+        "number": "317",
+        "district": "Icaraí",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 3
+    },
+    {
+      "buyer_id": "renata@codezone.com",
+      "seller_id": "filipi@origamid.com",
+      "product": {
+        "id": "tablet",
+        "name": "Tablet",
+        "user_id": "filipi@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Tablet",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "24230251",
+        "road": "Avenida Sete de Setembro",
+        "number": "317",
+        "district": "Icaraí",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 4
+    },
+    {
+      "buyer_id": "renata@codezone.com",
+      "seller_id": "andre@origamid.com",
+      "product": {
+        "name": "Iphone 13 Pro Max 1TB",
+        "price": "120000",
+        "description": "O melhor iphone da atualidade",
+        "photos": null,
+        "sold": "false",
+        "user_id": "andre@origamid.com",
+        "id": "PJu7gxW"
+      },
+      "address": {
+        "zipCode": "24230251",
+        "road": "Avenida Sete de Setembro",
+        "number": "317",
+        "district": "Icaraí",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 5
     }
   ],
   "product": [
     {
-      "id": "notebook",
-      "name": "Notebook",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -100,12 +246,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 2",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -127,12 +282,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 3",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -154,12 +318,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 4",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -181,12 +354,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -208,12 +390,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 2",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -235,12 +426,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 3",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -262,12 +462,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 4",
-      "user_id": "andre@origamid.com",
+      "id": "tablet",
+      "name": "Tablet",
+      "user_id": "filipi@origamid.com",
       "price": "4999",
       "sold": "false",
-      "description": "Esse é um novo Notebook",
+      "description": "Esse é um novo Tablet",
+      "photo": null
+    },
+    {
+      "id": "smartphone",
+      "name": "Smartphone",
+      "user_id": "gaby@origamid.com",
+      "price": "4999",
+      "sold": "false",
+      "description": "Esse é um novo Samrtphone",
       "photo": null
     },
     {
@@ -289,15 +498,6 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
       "id": "tablet",
       "name": "Tablet",
       "user_id": "filipi@origamid.com",
@@ -316,220 +516,21 @@
       "photo": null
     },
     {
-      "id": "notebook",
-      "name": "Notebook 2",
+      "name": "Galaxy S22 Ultra - 512 GB",
+      "price": "8650",
+      "description": "A linha galaxy agora tem um um novo integrante, o \"ULTRA\".",
+      "photos": null,
+      "user_id": "nathan@origamid.com",
+      "id": "NhYsoXz"
+    },
+    {
+      "name": "Iphone 13 Pro Max 1TB",
+      "price": "120000",
+      "description": "O melhor iphone da atualidade",
+      "photos": null,
+      "sold": "false",
       "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 3",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 4",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 3",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 4",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 4",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 3",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
-    },
-    {
-      "id": "notebook",
-      "name": "Notebook 4",
-      "user_id": "andre@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Notebook",
-      "photo": null
-    },
-    {
-      "id": "tablet",
-      "name": "Tablet",
-      "user_id": "filipi@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Tablet",
-      "photo": null
-    },
-    {
-      "id": "smartphone",
-      "name": "Smartphone",
-      "user_id": "gaby@origamid.com",
-      "price": "4999",
-      "sold": "false",
-      "description": "Esse é um novo Samrtphone",
-      "photo": null
+      "id": "PJu7gxW"
     }
   ]
 }
