@@ -4,12 +4,12 @@
       <h2>Vendas</h2>
       <div class="product-wrapper" v-for="(sale, index) in sales" :key="index">
         <ProductItem v-if="sale.product" :product="sale.product">
-          <p class="seller"><span>Comprador: </span>{{ sale.saller_id }}</p>
+          <p class="seller"><span>Comprador: </span>{{ sale.buyer_id }}</p>
         </ProductItem>
 				<div class="delivery">
 					<h3>Entrega: </h3>
-					<ul v-if="sales.address">
-						<li :v-for="(value, key) in sales.address" :key="key">
+					<ul v-if="sale.address">
+						<li v-for="(value, key) in sale.address" :key="key">
 							{{key}}: {{value}}
 						</li>
 					</ul>
@@ -25,7 +25,7 @@ import { api } from "@/services";
 import { mapState } from "vuex";
 
 export default {
-  name: "BuyUser",
+  name: "SalesUser",
   data() {
     return {
       sales: null,
@@ -40,7 +40,6 @@ export default {
   methods: {
     getSales() {
       api.get(`/transaction?seller_id=${this.user.id}`).then((response) => {
-				console.log(response.data)
         this.sales = response.data;
       });
     },
@@ -73,7 +72,7 @@ h2 {
 
 	.delivery {
 		display: grid;
-		grid-template-columns: minmax(rem(1000), rem(200)) 1fr;
+		grid-template-columns: minmax(rem(100), rem(200)) 1fr;
 		gap: rem(20);
 		margin-bottom: rem(60);
 

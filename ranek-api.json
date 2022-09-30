@@ -33,7 +33,7 @@
       "district": "Barra da Tijuca",
       "city": "Rio de Janeiro",
       "state": "RJ",
-      "number": "320"
+      "number": "260"
     },
     {
       "id": "alessandro@codezone.com",
@@ -206,6 +206,248 @@
         "state": "RJ"
       },
       "id": 5
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "filipi@origamid.com",
+      "product": {
+        "id": "tablet",
+        "name": "Tablet",
+        "user_id": "filipi@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Tablet",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 6
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "filipi@origamid.com",
+      "product": {
+        "id": "tablet",
+        "name": "Tablet",
+        "user_id": "filipi@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Tablet",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 7
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "gaby@origamid.com",
+      "product": {
+        "id": "smartphone",
+        "name": "Smartphone",
+        "user_id": "gaby@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Samrtphone",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 8
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "gaby@origamid.com",
+      "product": {
+        "id": "smartphone",
+        "name": "Smartphone",
+        "user_id": "gaby@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Samrtphone",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 9
+    },
+    {
+      "buyer_id": "alessandro@codezone.com.br",
+      "seller_id": "nathan@origamid.com",
+      "product": {
+        "name": "Galaxy A20",
+        "price": "899",
+        "description": "Aparelho Top",
+        "photos": null,
+        "sold": "false",
+        "user_id": "nathan@origamid.com",
+        "id": "zYsXwkw"
+      },
+      "address": {
+        "zipCode": "24040280",
+        "road": "Rua Barão de Mauá",
+        "number": "302",
+        "district": "Ponta D'Areia",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 10
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "alessandro@codezone.com.br",
+      "product": {
+        "name": "Galaxy s22",
+        "price": "2899",
+        "description": "Novinho!",
+        "photos": null,
+        "sold": "false",
+        "user_id": "alessandro@codezone.com.br",
+        "id": "vGAQY9-"
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 11
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "nathan@origamid.com",
+      "product": {
+        "name": "Galaxy A20",
+        "price": "899",
+        "description": "Aparelho Top",
+        "photos": null,
+        "sold": "false",
+        "user_id": "nathan@origamid.com",
+        "id": "zYsXwkw"
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 12
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "filipi@origamid.com",
+      "product": {
+        "id": "tablet",
+        "name": "Tablet",
+        "user_id": "filipi@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Tablet",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 13
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "gaby@origamid.com",
+      "product": {
+        "id": "smartphone",
+        "name": "Smartphone",
+        "user_id": "gaby@origamid.com",
+        "price": "4999",
+        "sold": "false",
+        "description": "Esse é um novo Samrtphone",
+        "photo": null
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 14
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "alessandro@codezone.com.br",
+      "product": {
+        "name": "Galaxy s22",
+        "price": "2899",
+        "description": "Novinho!",
+        "photos": null,
+        "sold": "false",
+        "user_id": "alessandro@codezone.com.br",
+        "id": "vGAQY9-"
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 15
+    },
+    {
+      "buyer_id": "nathan@origamid.com",
+      "seller_id": "nathan@origamid.com",
+      "product": {
+        "name": "Galaxy A20",
+        "price": "899",
+        "description": "Aparelho Top",
+        "photos": null,
+        "sold": "false",
+        "user_id": "nathan@origamid.com",
+        "id": "zYsXwkw"
+      },
+      "address": {
+        "zipCode": "22640102",
+        "road": "Avenida das Américas",
+        "number": "260",
+        "district": "Barra da Tijuca",
+        "city": "Rio de Janeiro",
+        "state": "RJ"
+      },
+      "id": 16
     }
   ],
   "product": [
@@ -516,14 +758,6 @@
       "photo": null
     },
     {
-      "name": "Galaxy S22 Ultra - 512 GB",
-      "price": "8650",
-      "description": "A linha galaxy agora tem um um novo integrante, o \"ULTRA\".",
-      "photos": null,
-      "user_id": "nathan@origamid.com",
-      "id": "NhYsoXz"
-    },
-    {
       "name": "Iphone 13 Pro Max 1TB",
       "price": "120000",
       "description": "O melhor iphone da atualidade",
@@ -531,6 +765,15 @@
       "sold": "false",
       "user_id": "andre@origamid.com",
       "id": "PJu7gxW"
+    },
+    {
+      "name": "Galaxy s22",
+      "price": "2899",
+      "description": "Novinho!",
+      "photos": null,
+      "sold": "false",
+      "user_id": "alessandro@codezone.com.br",
+      "id": "vGAQY9-"
     }
   ]
 }
