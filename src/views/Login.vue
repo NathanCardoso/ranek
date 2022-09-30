@@ -31,8 +31,12 @@ export default {
 	},
 	methods: {
 		logInto() {
-			this.$store.dispatch("getUser", this.login.email)
-			this.$router.push({name: "user"})
+			this.$store.dispatch("userLogin", this.login)
+			.then(response => {
+				this.$store.dispatch("getUser")
+				this.$router.push({name: "user"})
+				console.log(response)
+			})
 		}
 	}
 }
