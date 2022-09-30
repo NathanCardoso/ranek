@@ -20,10 +20,6 @@
 </template>
 
 <script>
-import ProductItem from "@/components/ProductItem.vue";
-import { api } from "@/services";
-import { mapState } from "vuex";
-
 export default {
   name: "SalesUser",
   data() {
@@ -76,10 +72,4 @@ h2 {
 		gap: rem(20);
 		margin-bottom: rem(60);
 
-		h3 {
-			justify-self: end;
-			margin: 0px;
-		}
-	}
-}
-</style>
+<style>

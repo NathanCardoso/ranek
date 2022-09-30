@@ -10,12 +10,6 @@ export const api = {
 	},
 	post(endpoint, body) {
 		return url.post(endpoint, body)
-	},
-	put(endpoint, body) {
-		return url.put(endpoint, body)
-	},
-	delete(endpoint) {
-		return url.delete(endpoint)
 	}
 }
 
