@@ -32,7 +32,7 @@
       "district": "Barra da Tijuca",
       "city": "Rio de Janeiro",
       "state": "RJ",
-      "number": "260"
+      "number": "850"
     },
     {
       "id": "alessandro@codezone.com",
@@ -105,6 +105,18 @@
       "city": "",
       "state": "",
       "number": ""
+    },
+    {
+      "id": "michael.teste@codezone.com",
+      "name": "Michael Souza",
+      "email": "michael.teste@codezone.com",
+      "password": "123",
+      "zipCode": "24230251",
+      "road": "Avenida Sete de Setembro",
+      "district": "Icaraí",
+      "city": "Niterói",
+      "state": "RJ",
+      "number": "1000"
     }
   ],
   "transaction": [
@@ -459,6 +471,50 @@
         "state": "RJ"
       },
       "id": 16
+    },
+    {
+      "buyer_id": "michael.teste@codezone.com",
+      "seller_id": "michael.teste@codezone.com",
+      "product": {
+        "name": "Computador Gamer",
+        "price": "150000",
+        "description": "Novinho! Itel Celeron.",
+        "photos": null,
+        "sold": "false",
+        "user_id": "michael.teste@codezone.com",
+        "id": "bWntddP"
+      },
+      "address": {
+        "zipCode": "24230251",
+        "road": "Avenida Sete de Setembro",
+        "number": "1000",
+        "district": "Icaraí",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 17
+    },
+    {
+      "buyer_id": "alessandro@codezone.com.br",
+      "seller_id": "michael.teste@codezone.com",
+      "product": {
+        "name": "Computador Gamer",
+        "price": "150000",
+        "description": "Novinho! Itel Celeron.",
+        "photos": null,
+        "sold": "false",
+        "user_id": "michael.teste@codezone.com",
+        "id": "bWntddP"
+      },
+      "address": {
+        "zipCode": "24040280",
+        "road": "Rua Barão de Mauá",
+        "number": "302",
+        "district": "Ponta D'Areia",
+        "city": "Niterói",
+        "state": "RJ"
+      },
+      "id": 18
     }
   ],
   "product": [
@@ -938,6 +994,15 @@
       "sold": "false",
       "user_id": "alessandro@codezone.com.br",
       "id": "vGAQY9-"
+    },
+    {
+      "name": "Computador Gamer",
+      "price": "150000",
+      "description": "Novinho! Itel Celeron.",
+      "photos": null,
+      "sold": "false",
+      "user_id": "michael.teste@codezone.com",
+      "id": "bWntddP"
     }
   ]
 }
