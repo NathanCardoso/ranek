@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2>Crie a sua conta</h2>
+		<MistakesNotification :mistakes="mistakes"/>
     <transition mode="out-in">
       <button v-if="!create" class="btn" @click="create = true">Criar Conta</button>
       <UserForm v-else>
@@ -18,6 +19,7 @@ export default {
   data() {
     return {
       create: false,
+			mistakes: []
     };
   },
   components: {
@@ -25,15 +27,15 @@ export default {
   },
   methods: {
     async userCreate() {
+			this.mistakes = []
 			try {
 				await this.$store.dispatch("userCreate", this.$store.state.user);
 				await this.$store.dispatch('userLogin',this.$store.state.user)
 				await this.$store.dispatch("getUser");
 				this.$router.push({name: "user"})
-			}
-			catch(error) {
-				console.log(error)
-			}
+			} catch (mistake) {
+        this.mistakes.push(mistake.response.data.message)
+      }
     },
   },
 };

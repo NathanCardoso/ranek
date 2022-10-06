@@ -7,8 +7,9 @@
 				<label for="password">Senha</label>
 				<input type="password"	name="password" id="password" v-model="login.password">
 				<button class="btn" @click.prevent="logInto">Logar</button>
+				<MistakeNotification :mistakes="mistakes"/>
 			</form>
-			<p class="forget">Esqueceu sua senha? <a href="/" targte="_blank">Clique aqui</a></p>
+			<p class="forget">Esqueceu sua senha? <a href="http://ranek-api.local/wp-login.php?action=lostpassword" targte="_blank">Clique aqui</a></p>
 			<CreateLogin/>
 		</section>
 </template>
@@ -23,7 +24,8 @@ export default {
 			login: {
 				email: '',
 				password: ''
-			}
+			},
+			mistakes: []
 		}
 	},
 	components: {
@@ -31,10 +33,12 @@ export default {
 	},
 	methods: {
 		logInto() {
-			this.$store.dispatch('userLogin', this.login).then(response => {
+			this.mistakes = []
+			this.$store.dispatch('userLogin', this.login).then(() => {
 				this.$store.dispatch("getUser")
 				this.$router.push({name: "user"})
-				response
+			}).catch(mistake => {
+				this.mistakes.push(mistake.response.data.message)
 			})
 		}
 	}

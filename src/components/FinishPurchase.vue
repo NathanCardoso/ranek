@@ -1,6 +1,7 @@
 <template>
   <section>
     <h2>Endereço de envio</h2>
+		<MistakesNotification :mistakes="mistakes"/>
     <UserForm>
       <button class="btn" @click.prevent="finishPurchase">Finalizar Compra</button>
     </UserForm>
@@ -18,6 +19,11 @@ export default {
   components: {
     UserForm,
   },
+	data() {
+		return {
+			mistakes: []
+		}
+	},
   computed: {
     ...mapState(["user"]),
     purchase() {
@@ -49,11 +55,12 @@ export default {
         await this.$store.dispatch("userLogin", this.$store.state.user);
         await this.$store.dispatch("getUser");
         await this.transactionCreate();
-      } catch (error) {
-        console.log(error);
+      } catch (mistake) {
+        this.mistakes.push(mistake.response.data.message)
       }
     },
     finishPurchase() {
+			this.mistakes = []
       if (this.$store.state.login) {
         this.transactionCreate();
       } else {
