@@ -17,7 +17,7 @@ export default {
   name: "TheHeader",
 	computed: {
 		name() {
-			return this.$store.state.user.name.replace(/ .*/, "")
+			return this.$store.state.user.name
 		}
 	}
 };

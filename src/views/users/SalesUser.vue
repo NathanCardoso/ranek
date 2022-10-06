@@ -4,7 +4,7 @@
       <h2>Vendas</h2>
       <div class="product-wrapper" v-for="(sale, index) in sales" :key="index">
         <ProductItem v-if="sale.product" :product="sale.product">
-          <p class="seller"><span>Comprador: </span>{{ sale.buyer_id }}</p>
+          <p class="seller"><span>Comprador: </span>{{ sale.buyer_name }}</p>
         </ProductItem>
 				<div class="delivery">
 					<h3>Entrega: </h3>
@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     getSales() {
-      api.get(`/transaction?seller_id=${this.user.id}`).then((response) => {
+      api.get(`/transaction?type=seller_id`).then((response) => {
         this.sales = response.data;
       });
     },

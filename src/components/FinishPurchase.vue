@@ -22,7 +22,7 @@ export default {
     ...mapState(["user"]),
     purchase() {
       return {
-        buyer_id: this.user.email,
+        buyer_id: this.user.id,
         seller_id: this.product.user_id,
         product: this.product,
         address: {
@@ -38,14 +38,16 @@ export default {
   },
   methods: {
     async transactionCreate() {
-      return api.post("/transaction", this.purchase).then(() => {
-        this.$router.push({ name: "buy-user" });
-      });
+      const transaction = await api.post("/transaction", this.purchase).then(() => {
+				this.$router.push({ name: "buy-user" });
+			})
+			return transaction
     },
     async userCreate() {
       try {
         await this.$store.dispatch("userCreate", this.$store.state.user);
-        await this.$store.dispatch("getUser", this.$store.state.user.email);
+        await this.$store.dispatch("userLogin", this.$store.state.user);
+        await this.$store.dispatch("getUser");
         await this.transactionCreate();
       } catch (error) {
         console.log(error);
