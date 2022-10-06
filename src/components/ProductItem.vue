@@ -2,11 +2,10 @@
   <div class="product" v-if="product">
     <router-link class="img-product" :to="{ name: 'product', params: { id: product.id } }">
       <img
-        v-if="product.photo"
-        :src="product.photo[0].src"
-        :alt="product.photo[0].title"
+        v-if="product.photos"
+        :src="product.photos[0].src"
+        :alt="product.photos[0].title"
       />
-      <p>Ver Produto</p>
     </router-link>
     <div class="info">
       <p class="price">{{ product.price | priceNumber }}</p>
@@ -30,10 +29,11 @@ export default {
   gap: rem(20);
   margin-bottom: rem(40);
   position: relative;
-
+	
 	.img-product {
 		border-radius: rem(4);
 		overflow: hidden;
+		max-height: rem(100);
 	}
 
 	.info {

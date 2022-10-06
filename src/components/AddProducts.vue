@@ -5,7 +5,7 @@
     <label for="price">Preço (R$)</label>
     <input type="number" id="price" name="price" v-model="product.price" />
     <label for="photos">Fotos</label>
-    <input type="file" id="photo" name="photo" ref="photos" />
+    <input type="file" id="photos" name="photos" multiple ref="photos" />
     <label for="description">Descrição</label>
     <textarea
       type="text"
@@ -39,12 +39,26 @@ export default {
     };
   },
   methods: {
-    formatProduct() {
-      this.product.user_id = this.$store.state.user.id;
-    },
+		formatProduct() {
+			const form = new FormData()
+
+			const files = this.$refs.photos.files 
+			console.log(files)
+			for(let i = 0; i < files.length; i++) {
+				form.append(files[i].name, files[i])
+			}
+
+			form.append('name', this.product.name)
+			form.append('price', this.product.price)
+			form.append('description', this.product.description)
+			form.append('sold', this.product.description)
+			form.append('user_id', this.$store.state.user.id)
+
+			return form
+		},
     addProduct() {
-      this.formatProduct();
-      api.post("/product", this.product).then(() => {
+			const product = this.formatProduct();
+      api.post("/product", product).then(() => {
         this.$store.dispatch("getUserProduct");
       });
     },

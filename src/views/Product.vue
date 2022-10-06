@@ -1,8 +1,8 @@
 <template>
   <section>
     <div v-if="product" class="product">
-      <ul class="photos" v-if="product.photo">
-        <li v-for="(foto, index) in product.photo" :key="index">
+      <ul class="photos" v-if="product.photos">
+        <li v-for="(foto, index) in product.photos" :key="index">
           <img :src="foto.src" :alt="foto.title" />
         </li>
       </ul>
@@ -14,7 +14,7 @@
           <button class="btn" v-if="!finish" @click="finish = true">Comprar</button>
           <FinishPurchase v-else :product="product"/>
         </transition>
-        <button class="btn" v-else disabled>Produto Vendido</button>
+        <button class="btn btn-disabled" v-else disabled>Produto Vendido</button>
       </div>
     </div>
     <PageLoading v-else />
@@ -61,7 +61,19 @@ export default {
   padding: rem(60) rem(20);
   margin: 0 auto;
 
+	.photos {
+		grid-row: 1 / 3;
+
+		img {
+			margin-bottom: rem(20);
+			box-shadow: $shadow_alt;
+			border-radius: rem(4);
+		}
+	}
+
   .info {
+		position: sticky;
+		top: rem(30);
     .price {
       color: $orange;
       font-weight: bold;

@@ -110,6 +110,15 @@ img {
     background: $purple_alt;
     transform: scale(1.1);
   }
+
+	&.btn-disabled {
+		background: $gray_alt;
+		transform: scale(1);
+
+		&:hover {
+			background: $gray_alt;
+		}
+	}
 }
 
 /*Style of the input and textarea*/

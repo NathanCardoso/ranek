@@ -5,9 +5,9 @@
         <div v-for="(product, index) in products" :key="index" class="product">
           <router-link :to="{name: 'product', params: {id: product.id}}">
             <img
-              v-if="product.photo"
-              :src="product.photo[0].src"
-              :alt="product.photo[0].title"
+              v-if="product.photos"
+              :src="product.photos[0].src"
+              :alt="product.photos[0].title"
             />
             <p class="price">{{ product.price | priceNumber}}</p>
             <h2 class="title">{{ product.name}}</h2>
