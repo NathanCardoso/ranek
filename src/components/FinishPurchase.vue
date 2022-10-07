@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2>Endereço de envio</h2>
-		<MistakesNotification :mistakes="mistakes"/>
+		<MistakeNotification :mistakes="mistakes"/>
     <UserForm>
       <button class="btn" @click.prevent="finishPurchase">Finalizar Compra</button>
     </UserForm>

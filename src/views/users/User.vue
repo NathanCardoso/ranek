@@ -24,6 +24,9 @@ export default {
       this.$router.push("/login");
     },
   },
+	created() {
+		document.title = 'Usuário'
+	}
 };
 </script>
 
@@ -63,7 +66,7 @@ export default {
   }
 }
 
-@media screen and (max-width: rem(500)) {
+@media screen and (max-width: rem(767)) {
   .user {
     grid-template-columns: 1fr;
     margin: 0 auto;

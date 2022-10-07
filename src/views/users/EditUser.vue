@@ -34,6 +34,9 @@ export default {
 				this.mistakes.push(mistake.response.data.message)
 			})
 		}
+	},
+	created() {
+		document.title = 'Usuário | Editar'
 	}
 }
 </script>

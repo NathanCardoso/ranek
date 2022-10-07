@@ -16,7 +16,10 @@ export default {
 	components: {
     SearchProduct,
     ProductList
-}
+	},
+	created() {
+		document.title = 'Ranek'
+	}
 };
 </script>
 

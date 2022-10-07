@@ -128,6 +128,7 @@ label {
 
 input,
 textarea {
+	background: $white;
   border-radius: rem(4);
   border: rem(1) solid white;
   padding: rem(15);
@@ -136,6 +137,7 @@ textarea {
   font-size: rem(16);
   font-family: "Avenir", Arial, Helvetica, sans-serif;
   margin-bottom: rem(15);
+	width: 100%;
 
   &:hover,
   &:focus {
@@ -162,5 +164,11 @@ textarea {
 .v-enter-active,
 .v-leave-active {
   transition: all 0.3s;
+}
+
+@media screen and(max-width: rem(479)) {
+	.btn {
+		padding: rem(10) rem(20);
+	}
 }
 </style>

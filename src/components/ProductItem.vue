@@ -29,15 +29,22 @@ export default {
   gap: rem(20);
   margin-bottom: rem(40);
   position: relative;
-	
+	background: $white;
+	box-shadow: $shadow;
 	.img-product {
 		border-radius: rem(4);
 		overflow: hidden;
 		max-height: rem(100);
 	}
-
+	
 	.info {
 		align-self: end;
+		margin-bottom: rem(8);
+	}
+
+	@media screen and (max-width: rem(767)) {
+		grid-template-columns: 1fr;
+		gap: rem(10);
 	}
 }
 </style>

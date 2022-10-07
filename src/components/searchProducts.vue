@@ -2,7 +2,6 @@
   <form>
     <input id="search" name="search" type="text" placeholder="Buscar..." v-model="search" />
     <input type="submit" id="magnifier" value="Buscar" @click.prevent="searchProduct" />
-    {{ search }}
   </form>
 </template>
 
@@ -27,6 +26,7 @@ form {
   max-width: rem(600);
   margin: rem(30) auto rem(60) auto;
   position: relative;
+	padding: 0 rem(10);
   
 	#search {
     width: 100%;

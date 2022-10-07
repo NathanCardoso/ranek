@@ -54,6 +54,7 @@ export default {
     if (this.login) {
       this.getUserProduct();
     }
+		document.title = 'Usuário'
   },
 };
 </script>
@@ -61,6 +62,32 @@ export default {
 <style lang="scss" scoped>
 h2 {
   margin-bottom: rem(20);
+}
+
+ul {
+	max-height: rem(500);
+	overflow-y: auto;
+	padding: 0 20px 0 0;
+	
+	&::-webkit-scrollbar {
+			width: rem(6);		
+			position: absolute;	
+			right: -10px;
+		}
+		&::-webkit-scrollbar-track {
+			border-radius: rem(6);
+			background: #ccc;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $purple;
+			height: rem(172);
+			border-radius: rem(6);
+		}
+
+		li {
+			background: $white;
+			box-shadow: $shadow;
+		}
 }
 
 .list-enter,
@@ -75,8 +102,8 @@ h2 {
 
 .delete {
 	position: absolute;
-	top: 0;
-	right: 0;
+	top: rem(10);
+	right: rem(10);
 	background: url("../../assets/icon/remove.svg");
 	background-repeat: no-repeat;
 	background-position: center center;

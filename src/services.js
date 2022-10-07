@@ -1,10 +1,12 @@
 import axios from "axios"
 
-const url = axios.create({
-	baseURL: 'http://ranek-api.local/wp-json/api'
+const url = 'https://ranek.api.teamdev.com.br/wp-json/'
+
+const urlInstance = axios.create({
+	baseURL: url + 'api'
 })
 
-url.interceptors.request.use(
+urlInstance.interceptors.request.use(
 	function(config) {
 		const token = window.localStorage.token
 		if(token) {
@@ -19,22 +21,25 @@ url.interceptors.request.use(
 
 export const api = {
 	get(endpoint) {
-		return url.get(endpoint)
+		return urlInstance.get(endpoint)
 	},
 	post(endpoint, body) {
-		return url.post(endpoint, body)
+		return urlInstance.post(endpoint, body)
 	},
 	put(endpoint, body) {
-		return url.put(endpoint, body)
+		return urlInstance.put(endpoint, body)
 	},
 	delete(endpoint) {
-		return url.delete(endpoint)
+		return urlInstance.delete(endpoint)
 	},
 	login(body) {
-		return axios.post('http://ranek-api.local/wp-json/jwt-auth/v1/token', body)
+		return axios.post(
+			url + 'jwt-auth/v1/token', 
+			body)
 	},
 	validateToken() {
-		return url.post('http://ranek-api.local/wp-json/jwt-auth/v1/token/validate')
+		return urlInstance.post(
+			url + 'jwt-auth/v1/token/validate')
 	}
 }
 

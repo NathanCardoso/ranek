@@ -10,10 +10,11 @@
         <h1>{{ product.name }}</h1>
         <p class="price">{{ product.price | priceNumber }}</p>
         <p class="description">{{ product.description }}</p>
-        <transition mode="out-in" v-if="product.sold === 'false'">
+        <transition mode="out-in" v-if="product.sold === 'false' && this.$store.state.user.id !== +product.user_id">
           <button class="btn" v-if="!finish" @click="finish = true">Comprar</button>
           <FinishPurchase v-else :product="product"/>
         </transition>
+				<router-link to="/user" tag="button" class="btn" v-else-if="this.$store.state.user.id === +product.user_id">Meus produtos</router-link>
         <button class="btn btn-disabled" v-else disabled>Produto Vendido</button>
       </div>
     </div>
@@ -32,13 +33,15 @@ export default {
   data() {
     return {
       product: null,
-			finish: false
+			finish: false,
+
     };
   },
   methods: {
     getProduct() {
       api.get(`/product/${this.id}`).then((response) => {
         this.product = response.data;
+				document.title = this.product.name
       });
     },
   },
@@ -88,5 +91,17 @@ export default {
       width: rem(200);
     }
   }
+
+	@media screen and (max-width: rem(767)) {
+		grid-template-columns: 1fr;
+
+		.photos {
+			grid-row: 2;
+		}
+
+		.info {
+			position: initial;
+		}
+	}
 }
 </style>

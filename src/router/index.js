@@ -8,6 +8,7 @@ import ProductUser from "@/views/users/ProductUser.vue"
 import BuyUser from "@/views/users/BuyUser.vue"
 import EditUser from "@/views/users/EditUser.vue"
 import SalesUser from "@/views/users/SalesUser.vue"
+import PageNotFound from "@/views/PageNotFound.vue"
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,10 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+		{
+			path: '*',
+			component: PageNotFound
+		},
 		{
 			path: '/',
 			name: 'home',

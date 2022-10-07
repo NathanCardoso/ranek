@@ -43,7 +43,6 @@ export default {
 			const form = new FormData()
 
 			const files = this.$refs.photos.files 
-			console.log(files)
 			for(let i = 0; i < files.length; i++) {
 				form.append(files[i].name, files[i])
 			}
@@ -56,11 +55,20 @@ export default {
 
 			return form
 		},
-    addProduct() {
+    async addProduct(event) {
 			const product = this.formatProduct();
-      api.post("/product", product).then(() => {
-        this.$store.dispatch("getUserProduct");
-      });
+
+			const button = event.currentTarget
+			button.value = 'Adicionando...'
+			button.setAttribute('disabled', '')
+			button.classList.add('btn-disabled')
+
+      await api.post("/product", product)
+			await this.$store.dispatch("getUserProduct");
+			
+			button.value = 'Adicionar Produto'
+			button.removeAttribute('disabled')
+			button.classList.remove('btn-disabled')
     },
   },
 };
@@ -72,9 +80,25 @@ export default {
   grid-template-columns: rem(100) 1fr;
   align-items: center;
   margin-bottom: rem(60);
+	.btn {
+		grid-column: 2;
+
+		&.btn-disabled {
+			cursor: not-allowed;
+		}
+	}
 }
 
-.btn {
-  grid-column: 2;
+
+@media screen and (max-width: rem(479)) {
+	.add-product {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		
+		input + label {
+			margin-top: rem(16);
+		}
+	}
 }
 </style>
